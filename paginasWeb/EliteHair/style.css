@@ -1,0 +1,1050 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --negro: #111111;
+  --negro-suave: #1d1b1a;
+  --marron: #4b392f;
+
+  --dorado: #c5a46d;
+  --dorado-claro: #e5d2aa;
+
+  --crema: #f7f3ed;
+  --blanco: #ffffff;
+
+  --texto: #282421;
+  --texto-suave: #746b65;
+
+  --borde: rgba(60, 48, 40, 0.14);
+
+  --sombra:
+    0 22px 60px rgba(43, 32, 25, 0.16);
+
+  --radio: 30px;
+  --ancho-maximo: 1180px;
+}
+
+
+/* =========================
+   REINICIO GENERAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--crema);
+  color: var(--texto);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  min-height: 74px;
+  padding: 14px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  background: rgba(17, 17, 17, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+}
+
+.logo {
+  color: var(--blanco);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 31px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+nav a::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+
+  height: 1px;
+  background: var(--dorado);
+
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================
+   BOTONES GENERALES
+========================= */
+
+.btn-gold,
+.btn-glass,
+.card button,
+.card a,
+#reserva button,
+#contacto a {
+  min-height: 50px;
+  padding: 14px 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-gold,
+.card button,
+#reserva button {
+  border: none;
+
+  background: var(--dorado);
+  color: var(--negro);
+
+  box-shadow:
+    0 15px 32px rgba(197, 164, 109, 0.28);
+}
+
+.btn-gold:hover,
+.card button:hover,
+#reserva button:hover {
+  transform: translateY(-4px);
+  background: var(--dorado-claro);
+}
+
+.btn-glass {
+  border: 1px solid rgba(255, 255, 255, 0.42);
+
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--blanco);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.btn-glass:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+
+  padding: 120px 7% 75px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: var(--negro);
+  color: var(--blanco);
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  animation: zoomPortada 9s ease forwards;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 9, 8, 0.94) 0%,
+      rgba(10, 9, 8, 0.68) 48%,
+      rgba(10, 9, 8, 0.25) 100%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 720px;
+
+  animation: aparecer 1s ease both;
+}
+
+.hero-content > p {
+  margin-bottom: 13px;
+
+  color: var(--dorado);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(75px, 13vw, 150px);
+  font-weight: 500;
+  line-height: 0.84;
+}
+
+.hero-content > span {
+  margin-top: 28px;
+
+  display: block;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: clamp(16px, 2.2vw, 22px);
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 38px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+
+/* =========================
+   SOBRE NOSOTROS
+========================= */
+
+.about {
+  width: min(100% - 36px, var(--ancho-maximo));
+  margin: 0 auto;
+  padding: 110px 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.about-img {
+  height: 620px;
+
+  overflow: hidden;
+
+  border-radius: 220px 220px 30px 30px;
+
+  box-shadow: var(--sombra);
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(48px, 7vw, 76px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.about-text p {
+  color: var(--texto-suave);
+
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+
+/* =========================
+   TÍTULOS DE SECCIÓN
+========================= */
+
+.titulo {
+  margin-bottom: 15px;
+
+  color: var(--texto);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(48px, 7vw, 76px);
+  font-weight: 500;
+  line-height: 1;
+
+  text-align: center;
+}
+
+.subtitulo {
+  margin-bottom: 50px;
+
+  color: var(--texto-suave);
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  text-align: center;
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+#servicios {
+  padding: 110px max(18px, calc((100% - var(--ancho-maximo)) / 2));
+
+  background: #eee8df;
+}
+
+.cards {
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--radio);
+
+  background: rgba(255, 255, 255, 0.86);
+
+  box-shadow: var(--sombra);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-9px);
+
+  box-shadow:
+    0 28px 68px rgba(43, 32, 25, 0.23);
+}
+
+.card > img {
+  width: 100%;
+  height: 350px;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.card:hover > img {
+  transform: scale(1.06);
+}
+
+.card h3,
+.card p,
+.card span,
+.card button,
+.card a {
+  margin-right: 27px;
+  margin-left: 27px;
+}
+
+.card h3 {
+  margin-top: 26px;
+  margin-bottom: 10px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.card p {
+  min-height: 75px;
+
+  color: var(--texto-suave);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.card span {
+  margin-top: 20px;
+
+  display: block;
+
+  color: var(--marron);
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card button,
+.card a {
+  width: calc(100% - 54px);
+  margin-top: 22px;
+  margin-bottom: 27px;
+}
+
+.card a {
+  background: var(--negro);
+  color: var(--blanco);
+}
+
+.card a:hover {
+  transform: translateY(-4px);
+  background: var(--marron);
+}
+
+
+/* =========================
+   CARTA DE COLORES
+========================= */
+
+#colores {
+  width: min(100% - 36px, var(--ancho-maximo));
+  margin: 0 auto;
+  padding: 110px 0;
+}
+
+.selector-colores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.mechon {
+  min-width: 0;
+  padding: 17px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+
+  border: 1px solid var(--borde);
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--texto);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.mechon:hover,
+.mechon.activo {
+  transform: translateY(-6px);
+
+  border-color: var(--dorado);
+
+  background: var(--blanco);
+
+  box-shadow: var(--sombra);
+}
+
+.mechon img {
+  width: 100%;
+  max-width: 140px;
+  height: 135px;
+
+  object-fit: contain;
+  object-position: center;
+
+  mix-blend-mode: multiply;
+
+  transition: transform 0.3s ease;
+}
+
+.mechon:hover img {
+  transform: scale(1.06);
+}
+
+.mechon span {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+
+/* =========================
+   DETALLE DEL COLOR
+========================= */
+
+.detalle-color {
+  margin-top: 55px;
+
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  border: 1px solid var(--borde);
+  border-radius: 35px;
+
+  background: var(--blanco);
+
+  box-shadow: var(--sombra);
+}
+
+.imagen-detalle {
+  min-height: 480px;
+  padding: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1ece5;
+}
+
+.imagen-detalle img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+
+  object-fit: contain;
+
+  mix-blend-mode: multiply;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.35s ease;
+}
+
+.info-detalle {
+  padding: 58px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-detalle h3 {
+  margin-bottom: 14px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(45px, 6vw, 68px);
+  font-weight: 500;
+}
+
+.info-detalle > p {
+  margin-bottom: 18px;
+
+  color: var(--texto-suave);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tintura {
+  margin: 12px 0 28px;
+  padding: 21px;
+
+  border-left: 3px solid var(--dorado);
+
+  background: #f3eee6;
+}
+
+.tintura h4 {
+  margin-bottom: 8px;
+
+  color: var(--texto-suave);
+
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.tintura p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+#galeria {
+  padding: 110px max(18px, calc((100% - var(--ancho-maximo)) / 2));
+
+  background: var(--negro-suave);
+  color: var(--blanco);
+}
+
+#galeria .titulo {
+  color: var(--blanco);
+}
+
+.galeria {
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 500px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.3);
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.galeria img:nth-child(2) {
+  transform: translateY(35px);
+}
+
+.galeria img:hover {
+  transform: translateY(-7px) scale(1.02);
+  filter: brightness(0.8);
+}
+
+.galeria img:nth-child(2):hover {
+  transform: translateY(25px) scale(1.02);
+}
+
+
+/* =========================
+   FORMULARIO DE RESERVA
+========================= */
+
+#reserva {
+  padding: 110px 20px;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(197, 164, 109, 0.28),
+      transparent 30%
+    ),
+    #eee8df;
+}
+
+#reserva form {
+  width: min(100%, 650px);
+  margin: 50px auto 0;
+  padding: 38px;
+
+  display: grid;
+  gap: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 32px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  box-shadow: var(--sombra);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+#reserva input,
+#reserva select,
+#reserva textarea {
+  width: 100%;
+  padding: 14px 17px;
+
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--texto);
+
+  outline: none;
+}
+
+#reserva input,
+#reserva select {
+  min-height: 53px;
+}
+
+#reserva textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#reserva input:focus,
+#reserva select:focus,
+#reserva textarea:focus {
+  border-color: var(--dorado);
+
+  box-shadow:
+    0 0 0 3px rgba(197, 164, 109, 0.22);
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+#contacto {
+  padding: 100px 20px;
+
+  background: var(--negro);
+  color: var(--blanco);
+
+  text-align: center;
+}
+
+#contacto h2 {
+  margin-bottom: 20px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(50px, 8vw, 85px);
+  font-weight: 500;
+}
+
+#contacto p {
+  margin: 8px 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 14px;
+}
+
+#contacto a {
+  margin-top: 28px;
+
+  background: var(--dorado);
+  color: var(--negro);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 35px 20px;
+
+  background: #080808;
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 11px;
+  text-align: center;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes zoomPortada {
+  from {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .selector-colores {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about {
+    gap: 40px;
+  }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 720px) {
+  header {
+    min-height: auto;
+    padding: 13px 16px;
+
+    flex-direction: column;
+  }
+
+  .logo {
+    font-size: 27px;
+  }
+
+  nav {
+    width: 100%;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 13px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 125px 20px 70px;
+
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        rgba(10, 9, 8, 0.52),
+        rgba(10, 9, 8, 0.82)
+      );
+  }
+
+  .hero h1 {
+    font-size: clamp(76px, 25vw, 110px);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+  .about {
+    padding: 80px 0;
+
+    grid-template-columns: 1fr;
+  }
+
+  .about-img {
+    height: 470px;
+
+    border-radius: 150px 150px 25px 25px;
+  }
+
+  #servicios,
+  #colores,
+  #galeria,
+  #reserva {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card > img {
+    height: 330px;
+  }
+
+  .card p {
+    min-height: auto;
+  }
+
+  .selector-colores {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+  }
+
+  .mechon {
+    padding: 13px 6px;
+  }
+
+  .mechon img {
+    height: 105px;
+  }
+
+  .detalle-color {
+    grid-template-columns: 1fr;
+  }
+
+  .imagen-detalle {
+    min-height: 310px;
+    padding: 25px;
+  }
+
+  .imagen-detalle img {
+    max-height: 270px;
+  }
+
+  .info-detalle {
+    padding: 35px 23px;
+  }
+
+  .info-detalle .btn-gold {
+    width: 100%;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .galeria img {
+    height: 300px;
+  }
+
+  .galeria img:nth-child(2) {
+    transform: none;
+  }
+
+  .galeria img:nth-child(3) {
+    grid-column: 1 / -1;
+    height: 370px;
+  }
+
+  #reserva form {
+    padding: 25px 18px;
+  }
+}
+
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+
+@media (max-width: 420px) {
+  .selector-colores {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mechon img {
+    height: 88px;
+  }
+
+  .mechon span {
+    font-size: 9px;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria img,
+  .galeria img:nth-child(3) {
+    grid-column: auto;
+    height: 390px;
+  }
+}

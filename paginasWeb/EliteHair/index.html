@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elite Hair Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Elite Hair
+    </div>
+
+    <nav>
+
+        <a href="#inicio">Inicio</a>
+
+        <a href="#servicios">Servicios</a>
+
+        <a href="#colores">Colores</a>
+
+        <a href="#galeria">Galería</a>
+
+        <a href="#reserva">Reservar</a>
+
+        <a href="#contacto">Contacto</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ======================= -->
+
+<!-- PORTADA -->
+
+<!-- ======================= -->
+
+<section class="hero" id="inicio">
+
+    <img src="img/portada.jpg" class="hero-img">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <p>Beauty Studio</p>
+
+        <h1>Elite Hair</h1>
+
+        <span>
+            Belleza, color y estilo para tu cabello.
+        </span>
+
+        <div class="hero-buttons">
+
+            <a href="#servicios" class="btn-gold">
+                Ver Servicios
+            </a>
+
+            <a href="#reserva" class="btn-glass">
+                Reservar Turno
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================= -->
+
+<!-- SOBRE NOSOTROS -->
+
+<!-- ======================= -->
+
+<section class="about">
+
+    <div class="about-img">
+
+        <img src="img/salon.jpg">
+
+    </div>
+
+    <div class="about-text">
+
+        <h2>
+            Nuestro salón
+        </h2>
+
+        <p>
+
+            Creamos un espacio elegante pensado para brindarte una experiencia única.
+
+            Trabajamos con productos profesionales y técnicas modernas para lograr resultados naturales.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================= -->
+
+<!-- SERVICIOS -->
+
+<!-- ======================= -->
+
+<section id="servicios">
+
+<h2 class="titulo">
+
+Nuestros Servicios
+
+</h2>
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<img src="img/corte.jpg">
+
+<h3>
+
+Corte
+
+</h3>
+
+<p>
+
+Renová tu estilo con un corte personalizado.
+
+</p>
+
+<span>
+
+$22.000
+
+</span>
+
+<button>
+
+Reservar
+
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="img/peinado.jpg">
+
+<h3>
+
+Peinado
+
+</h3>
+
+<p>
+
+Peinados para eventos, fiestas y ocasiones especiales.
+
+</p>
+
+<span>
+
+$28.000
+
+</span>
+
+<button>
+
+Reservar
+
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="img/galeria2.jpg">
+
+<h3>
+
+Coloración
+
+</h3>
+
+<p>
+
+Elegí entre nuestra carta profesional de colores.
+
+</p>
+
+<span>
+
+Desde $35.000
+
+</span>
+
+<a href="#colores">
+
+Ver colores
+
+</a>
+
+</div>
+
+
+
+</div>
+
+</section>
+<!-- ======================= -->
+<!-- CARTA DE COLORES -->
+<!-- ======================= -->
+
+<section id="colores">
+
+    <h2 class="titulo">
+        Carta de Color
+    </h2>
+
+    <p class="subtitulo">
+        Elegí el tono que más te guste.
+    </p>
+
+    <div class="selector-colores">
+
+        <button class="mechon activo"
+
+            data-nombre="Castaño claro"
+
+            data-codigo="5.0"
+
+            data-tintura="Coloración permanente tono 5.0 Castaño Claro"
+
+            data-descripcion="Un castaño natural, suave y luminoso."
+
+            data-imagen="img/mechones/castano-claro.jpg">
+
+            <img src="img/mechones/castano-claro.jpg">
+
+            <span>Castaño claro</span>
+
+        </button>
+
+
+        <button class="mechon"
+
+            data-nombre="Rubio oscuro"
+
+            data-codigo="6.0"
+
+            data-tintura="Coloración permanente tono 6.0 Rubio Oscuro"
+
+            data-descripcion="Rubio oscuro natural."
+
+            data-imagen="img/mechones/rubio-oscuro.jpg">
+
+            <img src="img/mechones/rubio-oscuro.jpg">
+
+            <span>Rubio oscuro</span>
+
+        </button>
+
+
+        <button class="mechon"
+
+            data-nombre="Rubio medio"
+
+            data-codigo="7.0"
+
+            data-tintura="Coloración permanente tono 7.0 Rubio Medio"
+
+            data-descripcion="Rubio medio clásico."
+
+            data-imagen="img/mechones/rubio-medio.jpg">
+
+            <img src="img/mechones/rubio-medio.jpg">
+
+            <span>Rubio medio</span>
+
+        </button>
+
+
+        <button class="mechon"
+
+            data-nombre="Rubio claro"
+
+            data-codigo="8.0"
+
+            data-tintura="Coloración permanente tono 8.0 Rubio Claro"
+
+            data-descripcion="Rubio claro luminoso."
+
+            data-imagen="img/mechones/rubio-claro.jpg">
+
+            <img src="img/mechones/rubio-claro.jpg">
+
+            <span>Rubio claro</span>
+
+        </button>
+
+
+        <button class="mechon"
+
+            data-nombre="Rubio claro ceniza"
+
+            data-codigo="8.1"
+
+            data-tintura="Coloración permanente tono 8.1 Rubio Claro Ceniza"
+
+            data-descripcion="Neutraliza reflejos amarillos."
+
+            data-imagen="img/mechones/rubio-claro-ceniza.jpg">
+
+            <img src="img/mechones/rubio-claro-ceniza.jpg">
+
+            <span>Rubio claro ceniza</span>
+
+        </button>
+
+
+        <button class="mechon"
+
+            data-nombre="Rubio claro ceniza intenso"
+
+            data-codigo="8.11"
+
+            data-tintura="Coloración permanente tono 8.11 Rubio Claro Ceniza Intenso"
+
+            data-descripcion="Reflejo frío intenso."
+
+            data-imagen="img/mechones/rubio-claro-ceniza-intenso.jpg">
+
+            <img src="img/mechones/rubio-claro-ceniza-intenso.jpg">
+
+            <span>Ceniza intenso</span>
+
+        </button>
+
+
+        <button class="mechon"
+
+            data-nombre="Negro"
+
+            data-codigo="1.0"
+
+            data-tintura="Coloración permanente tono 1.0 Negro"
+
+            data-descripcion="Negro intenso y brillante."
+
+            data-imagen="img/mechones/negro.jpg">
+
+            <img src="img/mechones/negro.jpg">
+
+            <span>Negro</span>
+
+        </button>
+
+    </div>
+
+
+    <div class="detalle-color">
+
+        <div class="imagen-detalle">
+
+            <img
+
+                id="imagen-color"
+
+                src="img/mechones/castano-claro.jpg">
+
+        </div>
+
+        <div class="info-detalle">
+
+            <h3 id="nombre-color">
+
+                Castaño claro
+
+            </h3>
+
+            <p>
+
+                Código:
+
+                <strong id="codigo-color">
+
+                    5.0
+
+                </strong>
+
+            </p>
+
+            <p id="descripcion-color">
+
+                Un castaño natural, suave y luminoso.
+
+            </p>
+
+            <div class="tintura">
+
+                <h4>
+
+                    Tintura utilizada
+
+                </h4>
+
+                <p id="tintura-color">
+
+                    Coloración permanente tono 5.0 Castaño Claro
+
+                </p>
+
+            </div>
+
+            <a href="#reserva" class="btn-gold">
+
+                Reservar este color
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================= -->
+<!-- GALERÍA -->
+<!-- ======================= -->
+
+<section id="galeria">
+
+    <h2 class="titulo">
+
+        Nuestros Trabajos
+
+    </h2>
+
+    <div class="galeria">
+
+        <img src="img/galeria1.jpg">
+
+        <img src="img/galeria2.jpg">
+
+        <img src="img/galeria3.jpg">
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================= -->
+<!-- RESERVA -->
+<!-- ======================= -->
+
+<section id="reserva">
+
+<h2 class="titulo">
+
+Reservar Turno
+
+</h2>
+
+<form>
+
+<input type="text"
+
+placeholder="Nombre">
+
+<input type="tel"
+
+placeholder="Teléfono">
+
+<select>
+
+<option>
+
+Elegir servicio
+
+</option>
+
+<option>
+
+Corte
+
+</option>
+
+<option>
+
+Peinado
+
+</option>
+
+<option>
+
+Coloración
+
+</option>
+
+</select>
+
+<input type="date">
+
+<select>
+
+<option>
+
+09:00
+
+</option>
+
+<option>
+
+10:00
+
+</option>
+
+<option>
+
+11:00
+
+</option>
+
+<option>
+
+14:00
+
+</option>
+
+<option>
+
+15:00
+
+</option>
+
+<option>
+
+16:00
+
+</option>
+
+</select>
+
+<textarea
+
+placeholder="Comentario">
+
+</textarea>
+
+<button>
+
+Solicitar Turno
+
+</button>
+
+</form>
+
+</section>
+
+
+
+<!-- ======================= -->
+<!-- CONTACTO -->
+<!-- ======================= -->
+
+<section id="contacto">
+
+<h2>
+
+Elite Hair Studio
+
+</h2>
+
+<p>
+
+Av. San Martín 1500
+
+</p>
+
+<p>
+
+Lunes a Sábado
+
+9:00 a 20:00
+
+</p>
+
+<a href="https://wa.me/5492634475711">
+
+WhatsApp
+
+</a>
+
+</section>
+
+
+
+<footer>
+
+<p>
+
+© 2026 Elite Hair Studio
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

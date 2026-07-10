@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Food Start: hamburguesas, pizzas y panchos. Pedí por WhatsApp."
+  >
+
+  <title>Food Start | Comida rápida</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       ENCABEZADO
+  ========================== -->
+
+  <header class="encabezado">
+
+    <a href="#inicio" class="logo">
+      FOOD <span>START</span>
+    </a>
+
+    <button
+      type="button"
+      class="boton-menu"
+      id="boton-menu"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="navegacion" id="navegacion">
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         1. INICIO
+    ========================== -->
+
+    <section class="portada" id="inicio">
+
+      <div class="portada-fondo"></div>
+
+      <div class="portada-contenido">
+
+        <p class="etiqueta">
+          Comida rápida hecha al momento
+        </p>
+
+        <h1>
+          FOOD
+          <span>START</span>
+        </h1>
+
+        <p class="descripcion-portada">
+          Hamburguesas, pizzas y panchos preparados con mucho sabor.
+        </p>
+
+        <p class="tipos-comida">
+          Hamburguesas · Pizzas · Panchos
+        </p>
+
+        <div class="botones-portada">
+
+          <a
+            href="#menu"
+            class="boton boton-principal"
+          >
+            Ver menú
+          </a>
+
+          <a
+            href="https://wa.me/5492634475711?text=Hola,%20quiero%20hacer%20un%20pedido%20en%20Food%20Start."
+            target="_blank"
+            class="boton boton-secundario"
+          >
+            Pedir por WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+      <a href="#menu" class="flecha-bajar" aria-label="Ir al menú">
+        ↓
+      </a>
+
+    </section>
+
+
+    <!-- =========================
+         2. MENÚ
+    ========================== -->
+
+    <section class="menu" id="menu">
+
+      <div class="encabezado-seccion revelar">
+
+        <p class="etiqueta etiqueta-oscura">
+          Nuestros favoritos
+        </p>
+
+        <h2>Elegí tu comida</h2>
+
+        <p>
+          Tocá “Pedir” y te llevamos directamente a WhatsApp
+          con el producto seleccionado.
+        </p>
+
+      </div>
+
+
+      <div class="grilla-productos">
+
+        <!-- HAMBURGUESA -->
+
+        <article class="tarjeta-producto revelar">
+
+          <div class="imagen-producto">
+            <img
+              src="img/hamburguesa.jpg"
+              alt="Hamburguesa doble con queso y papas"
+            >
+
+            <span class="insignia-producto">
+              Más pedida
+            </span>
+          </div>
+
+          <div class="contenido-producto">
+
+            <h3>Hamburguesa completa</h3>
+
+            <p>
+              Doble carne, queso, lechuga, tomate y papas.
+            </p>
+
+            <div class="producto-pie">
+
+              <span class="precio">
+                $8.500
+              </span>
+
+              <a
+                href="https://wa.me/5492634475711?text=Hola,%20quiero%20pedir%20una%20Hamburguesa%20Completa%20de%20Food%20Start."
+                target="_blank"
+                class="boton-pedir"
+              >
+                Pedir
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- PANCHO -->
+
+        <article class="tarjeta-producto revelar">
+
+          <div class="imagen-producto">
+            <img
+              src="img/pancho.jpg"
+              alt="Pancho con mostaza y ketchup"
+            >
+          </div>
+
+          <div class="contenido-producto">
+
+            <h3>Pancho especial</h3>
+
+            <p>
+              Salchicha, aderezos y pan bien calentito.
+            </p>
+
+            <div class="producto-pie">
+
+              <span class="precio">
+                $4.500
+              </span>
+
+              <a
+                href="https://wa.me/5492634475711?text=Hola,%20quiero%20pedir%20un%20Pancho%20Especial%20de%20Food%20Start."
+                target="_blank"
+                class="boton-pedir"
+              >
+                Pedir
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- PIZZA -->
+
+        <article class="tarjeta-producto revelar">
+
+          <div class="imagen-producto">
+            <img
+              src="img/pizza.jpg"
+              alt="Pizza de mozzarella"
+            >
+          </div>
+
+          <div class="contenido-producto">
+
+            <h3>Pizza mozzarella</h3>
+
+            <p>
+              Salsa, abundante mozzarella y orégano.
+            </p>
+
+            <div class="producto-pie">
+
+              <span class="precio">
+                $12.000
+              </span>
+
+              <a
+                href="https://wa.me/5492634475711?text=Hola,%20quiero%20pedir%20una%20Pizza%20Mozzarella%20de%20Food%20Start."
+                target="_blank"
+                class="boton-pedir"
+              >
+                Pedir
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <!-- PROMOCIÓN -->
+
+      <article class="promocion revelar">
+
+        <div class="promocion-contenido">
+
+          <p class="promo-etiqueta">
+            Promo del día
+          </p>
+
+          <h2>
+            2 hamburguesas + papas
+          </h2>
+
+          <p>
+            Una opción ideal para compartir.
+          </p>
+
+          <span class="precio-promo">
+            $22.000
+          </span>
+
+          <a
+            href="https://wa.me/5492634475711?text=Hola,%20quiero%20pedir%20la%20Promo%20del%20Día%20de%20Food%20Start."
+            target="_blank"
+            class="boton boton-claro"
+          >
+            Aprovechar promoción
+          </a>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- =========================
+         3. CONTACTO
+    ========================== -->
+
+    <section class="contacto" id="contacto">
+
+      <div class="contacto-contenido revelar">
+
+        <p class="etiqueta">
+          Contacto
+        </p>
+
+        <h2>¿Dónde encontrarnos?</h2>
+
+        <div class="datos-contacto">
+
+          <article>
+            <span class="icono-contacto">📍</span>
+
+            <div>
+              <h3>Dirección</h3>
+              <p>Av. San Martín 1200, Mendoza</p>
+            </div>
+          </article>
+
+
+          <article>
+            <span class="icono-contacto">🕒</span>
+
+            <div>
+              <h3>Horarios</h3>
+              <p>Lunes a domingo, de 18:00 a 01:00</p>
+            </div>
+          </article>
+
+
+          <article>
+            <span class="icono-contacto">📱</span>
+
+            <div>
+              <h3>Pedidos</h3>
+              <p>Recibimos pedidos por WhatsApp.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="contacto-botones">
+
+          <a
+            href="https://wa.me/5492634475711?text=Hola,%20quiero%20hacer%20un%20pedido%20en%20Food%20Start."
+            target="_blank"
+            class="boton boton-principal"
+          >
+            Pedir por WhatsApp
+          </a>
+
+          <a
+            href="https://www.google.com/maps"
+            target="_blank"
+            class="boton boton-secundario"
+          >
+            Cómo llegar
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       WHATSAPP FLOTANTE
+  ========================== -->
+
+  <a
+    href="https://wa.me/5492634475711?text=Hola,%20quiero%20hacer%20un%20pedido%20en%20Food%20Start."
+    target="_blank"
+    class="whatsapp-flotante"
+    aria-label="Pedir por WhatsApp"
+  >
+    ☎
+  </a>
+
+
+  <!-- =========================
+       PIE DE PÁGINA
+  ========================== -->
+
+  <footer class="pie">
+
+    <a href="#inicio" class="logo logo-pie">
+      FOOD <span>START</span>
+    </a>
+
+    <p>
+      Comida rápida hecha al momento.
+    </p>
+
+    <div class="redes">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="https://wa.me/5492634475711" target="_blank">
+        WhatsApp
+      </a>
+    </div>
+
+    <p class="copyright">
+      © 2026 Food Start. Sitio demostrativo.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

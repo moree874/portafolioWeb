@@ -1,0 +1,876 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --naranja: #f97316;
+  --naranja-claro: #ff914d;
+  --rojo: #c62828;
+  --amarillo: #ffc107;
+
+  --negro: #161616;
+  --negro-suave: #24201e;
+
+  --blanco: #ffffff;
+  --crema: #fff5e9;
+  --texto-suave: #6b625d;
+
+  --sombra:
+    0 20px 50px rgba(34, 20, 12, 0.16);
+
+  --radio: 28px;
+}
+
+
+/* =========================
+   RESETEO
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--crema);
+  color: var(--negro);
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  min-height: 72px;
+  padding: 14px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  background: rgba(20, 17, 15, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.logo {
+  color: var(--blanco);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 31px;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--naranja);
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navegacion a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navegacion a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+
+  height: 2px;
+  border-radius: 999px;
+  background: var(--naranja);
+
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.navegacion a:hover::after {
+  transform: scaleX(1);
+}
+
+.boton-menu {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--blanco);
+
+  font-size: 21px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton {
+  min-height: 51px;
+  padding: 14px 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.boton:hover {
+  transform: translateY(-4px);
+}
+
+.boton-principal {
+  background: var(--naranja);
+  color: var(--blanco);
+  box-shadow: 0 14px 30px rgba(249, 115, 22, 0.34);
+}
+
+.boton-principal:hover {
+  background: #e8640d;
+}
+
+.boton-secundario {
+  border-color: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--blanco);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.boton-claro {
+  background: var(--blanco);
+  color: var(--rojo);
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.portada {
+  position: relative;
+  min-height: 100vh;
+  padding: 130px 7% 80px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  background: var(--negro);
+}
+
+.portada-fondo {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.72) 42%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    url("img/hamburguesa.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  animation: zoom-portada 8s ease forwards;
+}
+
+.portada-contenido {
+  position: relative;
+  z-index: 2;
+  max-width: 690px;
+
+  color: var(--blanco);
+  animation: aparecer 1s ease both;
+}
+
+.etiqueta {
+  margin-bottom: 15px;
+  color: var(--naranja-claro);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.portada h1 {
+  margin-bottom: 12px;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(85px, 15vw, 180px);
+  font-weight: 400;
+  line-height: 0.78;
+  letter-spacing: 4px;
+}
+
+.portada h1 span {
+  display: block;
+  color: var(--naranja);
+}
+
+.descripcion-portada {
+  max-width: 600px;
+  margin-top: 30px;
+
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.5;
+}
+
+.tipos-comida {
+  margin-top: 17px;
+  color: rgba(255, 255, 255, 0.67);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.botones-portada {
+  margin-top: 34px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.flecha-bajar {
+  position: absolute;
+  bottom: 27px;
+  left: 50%;
+  z-index: 3;
+
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  color: var(--blanco);
+  font-size: 20px;
+
+  transform: translateX(-50%);
+  animation: flotar 1.6s infinite;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.menu {
+  padding: 105px 7%;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 244, 231, 0.91),
+      rgba(255, 244, 231, 0.91)
+    ),
+    url("img/banner.jpg");
+
+  background-size: 500px;
+  background-attachment: fixed;
+}
+
+.encabezado-seccion {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.encabezado-seccion h2 {
+  margin-bottom: 15px;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(50px, 8vw, 82px);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.encabezado-seccion p {
+  color: var(--texto-suave);
+  line-height: 1.7;
+}
+
+.etiqueta-oscura {
+  color: var(--rojo);
+}
+
+.grilla-productos {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.tarjeta-producto {
+  overflow: hidden;
+
+  border: 1px solid rgba(69, 45, 30, 0.12);
+  border-radius: var(--radio);
+
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--sombra);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 55px rgba(34, 20, 12, 0.23);
+}
+
+.imagen-producto {
+  position: relative;
+  height: 285px;
+  overflow: hidden;
+}
+
+.imagen-producto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.tarjeta-producto:hover img {
+  transform: scale(1.07);
+}
+
+.insignia-producto {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  padding: 8px 13px;
+
+  border-radius: 999px;
+  background: var(--naranja);
+  color: var(--blanco);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contenido-producto {
+  padding: 25px;
+}
+
+.contenido-producto h3 {
+  margin-bottom: 10px;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.contenido-producto > p {
+  min-height: 55px;
+  color: var(--texto-suave);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.producto-pie {
+  margin-top: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.precio {
+  color: var(--rojo);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.boton-pedir {
+  padding: 11px 18px;
+
+  border-radius: 999px;
+  background: var(--negro);
+  color: var(--blanco);
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.boton-pedir:hover {
+  background: var(--naranja);
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   PROMOCIÓN
+========================= */
+
+.promocion {
+  width: min(100%, 1180px);
+  margin: 75px auto 0;
+  overflow: hidden;
+
+  border-radius: 35px;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(255, 193, 7, 0.38),
+      transparent 27%
+    ),
+    linear-gradient(135deg, #cf2e22, #8f1717);
+
+  color: var(--blanco);
+  box-shadow: var(--sombra);
+}
+
+.promocion-contenido {
+  padding: 60px 7%;
+  text-align: center;
+}
+
+.promo-etiqueta {
+  margin-bottom: 10px;
+  color: var(--amarillo);
+
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.promocion h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(48px, 8vw, 78px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.promocion p {
+  margin-top: 13px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.precio-promo {
+  margin: 20px 0 27px;
+  display: block;
+
+  color: var(--amarillo);
+  font-size: 37px;
+  font-weight: 900;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+  padding: 110px 7%;
+  background: var(--negro-suave);
+  color: var(--blanco);
+}
+
+.contacto-contenido {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contacto h2 {
+  margin-bottom: 40px;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(50px, 8vw, 82px);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.datos-contacto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.datos-contacto article {
+  padding: 27px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 23px;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.icono-contacto {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+.datos-contacto h3 {
+  margin-bottom: 6px;
+  font-size: 17px;
+}
+
+.datos-contacto p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+}
+
+.contacto-botones {
+  margin-top: 35px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp-flotante {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 900;
+
+  width: 60px;
+  height: 60px;
+
+  display: grid;
+  place-items: center;
+
+  border: 3px solid var(--blanco);
+  border-radius: 50%;
+
+  background: #25d366;
+  color: var(--blanco);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.27);
+
+  font-size: 25px;
+
+  transition: transform 0.25s ease;
+}
+
+.whatsapp-flotante:hover {
+  transform: scale(1.09);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.pie {
+  padding: 45px 7%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  background: #0f0f0f;
+  color: rgba(255, 255, 255, 0.64);
+
+  text-align: center;
+}
+
+.logo-pie {
+  font-size: 28px;
+}
+
+.redes {
+  display: flex;
+  gap: 20px;
+}
+
+.redes a {
+  color: var(--blanco);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+
+/* =========================
+   REVELAR AL HACER SCROLL
+========================= */
+
+.revelar {
+  opacity: 0;
+  transform: translateY(45px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.revelar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoom-portada {
+  from {
+    transform: scale(1.12);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, 8px);
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .grilla-productos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .datos-contacto {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 680px) {
+  .encabezado {
+    min-height: 65px;
+    padding: 10px 18px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .boton-menu {
+    display: grid;
+    place-items: center;
+  }
+
+  .navegacion {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 14px;
+    left: 14px;
+
+    padding: 16px;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+
+    background: rgba(20, 17, 15, 0.97);
+    box-shadow: var(--sombra);
+  }
+
+  .navegacion.abierta {
+    display: flex;
+  }
+
+  .navegacion a {
+    padding: 12px;
+    border-radius: 11px;
+  }
+
+  .navegacion a::after {
+    display: none;
+  }
+
+  .portada {
+    min-height: 100svh;
+    padding: 110px 20px 75px;
+  }
+
+  .portada-fondo {
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.68),
+        rgba(0, 0, 0, 0.82)
+      ),
+      url("img/hamburguesa.jpg");
+
+    background-position: center;
+  }
+
+  .portada-contenido {
+    text-align: center;
+  }
+
+  .portada h1 {
+    font-size: clamp(88px, 31vw, 135px);
+  }
+
+  .descripcion-portada {
+    font-size: 17px;
+  }
+
+  .botones-portada {
+    flex-direction: column;
+  }
+
+  .botones-portada .boton {
+    width: 100%;
+  }
+
+  .menu {
+    padding: 80px 15px;
+    background-attachment: scroll;
+  }
+
+  .grilla-productos {
+    grid-template-columns: 1fr;
+  }
+
+  .imagen-producto {
+    height: 250px;
+  }
+
+  .promocion {
+    margin-top: 50px;
+  }
+
+  .promocion-contenido {
+    padding: 50px 22px;
+  }
+
+  .contacto {
+    padding: 80px 15px;
+  }
+
+  .contacto-botones {
+    flex-direction: column;
+  }
+
+  .contacto-botones .boton {
+    width: 100%;
+  }
+
+  .whatsapp-flotante {
+    right: 15px;
+    bottom: 15px;
+    width: 55px;
+    height: 55px;
+  }
+}

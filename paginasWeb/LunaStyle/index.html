@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Luna Style, salón de uñas. Servicios, galería y reserva de turnos."
+  >
+
+  <title>Luna Style | Salón de uñas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       ENCABEZADO
+  ========================== -->
+
+  <header class="encabezado">
+
+    <a href="#inicio" class="logo">
+      Luna Style
+    </a>
+
+    <button
+      type="button"
+      class="boton-menu"
+      id="boton-menu"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="navegacion" id="navegacion">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#turnos">Turnos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         PORTADA
+    ========================== -->
+
+    <section class="portada" id="inicio">
+
+      <div class="portada-fondo"></div>
+
+      <div class="portada-contenido">
+
+        <p class="marca-secundaria">
+          Nail Studio
+        </p>
+
+        <h1>
+          Luna Style
+        </h1>
+
+        <p class="subtitulo-portada">
+          Elegancia en tus manos
+        </p>
+
+        <div class="botones-cristal">
+
+          <a href="#servicios" class="boton-cristal">
+            Servicios
+          </a>
+
+          <a href="#galeria" class="boton-cristal">
+            Galería
+          </a>
+
+          <a href="#opiniones" class="boton-cristal">
+            Opiniones
+          </a>
+
+          <a href="#contacto" class="boton-cristal">
+            Contacto
+          </a>
+
+        </div>
+
+      </div>
+
+      <a
+        href="#servicios"
+        class="flecha-bajar"
+        aria-label="Bajar a servicios"
+      >
+        ↓
+      </a>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICIOS
+    ========================== -->
+
+    <section class="seccion servicios" id="servicios">
+
+      <div class="encabezado-seccion revelar">
+
+        <p class="etiqueta">
+          Nuestros servicios
+        </p>
+
+        <h2>
+          Elegí el tratamiento ideal
+        </h2>
+
+        <p>
+          Conocé nuestras opciones y reservá el servicio que más
+          se adapte a tus manos.
+        </p>
+
+      </div>
+
+
+      <div class="grilla-servicios">
+
+        <!-- KAPPING -->
+
+        <article class="tarjeta-servicio revelar">
+
+          <div class="imagen-servicio">
+
+            <img
+              src="img/kapping.jpg"
+              alt="Diseño de uñas Kapping Gel"
+            >
+
+          </div>
+
+          <div class="contenido-servicio">
+
+            <p class="tipo-servicio">
+              Fortalecimiento
+            </p>
+
+            <h3>
+              Kapping Gel
+            </h3>
+
+            <p>
+              Ideal para fortalecer la uña natural y protegerla
+              sin agregar demasiado largo.
+            </p>
+
+            <div class="datos-servicio">
+              <span>90 minutos</span>
+              <strong>$25.000</strong>
+            </div>
+
+            <button
+              type="button"
+              class="boton-reservar"
+              data-servicio="Kapping Gel"
+            >
+              Reservar turno
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- SEMIGEL -->
+
+        <article class="tarjeta-servicio revelar">
+
+          <div class="imagen-servicio">
+
+            <img
+              src="img/semigel.jpg"
+              alt="Diseño de uñas Semigel"
+            >
+
+          </div>
+
+          <div class="contenido-servicio">
+
+            <p class="tipo-servicio">
+              Color y brillo
+            </p>
+
+            <h3>
+              Semigel
+            </h3>
+
+            <p>
+              Esmaltado de larga duración, acabado brillante y
+              protección para la uña natural.
+            </p>
+
+            <div class="datos-servicio">
+              <span>60 minutos</span>
+              <strong>$18.000</strong>
+            </div>
+
+            <button
+              type="button"
+              class="boton-reservar"
+              data-servicio="Semigel"
+            >
+              Reservar turno
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- SOFT GEL -->
+
+        <article class="tarjeta-servicio revelar">
+
+          <div class="imagen-servicio">
+
+            <img
+              src="img/softgel.jpg"
+              alt="Diseño de uñas Soft Gel"
+            >
+
+          </div>
+
+          <div class="contenido-servicio">
+
+            <p class="tipo-servicio">
+              Extensión
+            </p>
+
+            <h3>
+              Soft Gel
+            </h3>
+
+            <p>
+              Extensiones livianas y resistentes con un resultado
+              delicado, prolijo y natural.
+            </p>
+
+            <div class="datos-servicio">
+              <span>120 minutos</span>
+              <strong>$30.000</strong>
+            </div>
+
+            <button
+              type="button"
+              class="boton-reservar"
+              data-servicio="Soft Gel"
+            >
+              Reservar turno
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALERÍA
+    ========================== -->
+
+    <section class="seccion galeria" id="galeria">
+
+      <div class="encabezado-seccion revelar">
+
+        <p class="etiqueta">
+          Nuestros trabajos
+        </p>
+
+        <h2>
+          Diseños que inspiran
+        </h2>
+
+        <p>
+          Tocá una imagen para verla en tamaño completo.
+        </p>
+
+      </div>
+
+
+      <div class="grilla-galeria">
+
+        <button
+          type="button"
+          class="foto-galeria revelar"
+          data-imagen="img/galeria1.jpg"
+          aria-label="Abrir diseño bordó"
+        >
+          <img
+            src="img/galeria1.jpg"
+            alt="Uñas bordó"
+          >
+        </button>
+
+        <button
+          type="button"
+          class="foto-galeria revelar"
+          data-imagen="img/galeria2.jpg"
+          aria-label="Abrir diseño francés"
+        >
+          <img
+            src="img/galeria2.jpg"
+            alt="Uñas francesas"
+          >
+        </button>
+
+        <button
+          type="button"
+          class="foto-galeria revelar"
+          data-imagen="img/galeria3.jpg"
+          aria-label="Abrir diseño nude"
+        >
+          <img
+            src="img/galeria3.jpg"
+            alt="Uñas nude con detalles dorados"
+          >
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         OPINIONES
+    ========================== -->
+
+    <section class="seccion opiniones" id="opiniones">
+
+      <div class="encabezado-seccion revelar">
+
+        <p class="etiqueta">
+          Experiencias
+        </p>
+
+        <h2>
+          Lo que dicen nuestras clientas
+        </h2>
+
+      </div>
+
+
+      <div class="grilla-opiniones">
+
+        <article class="opinion revelar">
+
+          <div class="estrellas">
+            ★★★★★
+          </div>
+
+          <p>
+            “Me encantó el resultado. Las uñas quedaron delicadas,
+            prolijas y duraron muchísimo.”
+          </p>
+
+          <strong>
+            Camila
+          </strong>
+
+        </article>
+
+
+        <article class="opinion revelar">
+
+          <div class="estrellas">
+            ★★★★★
+          </div>
+
+          <p>
+            “La atención fue hermosa y el diseño quedó exactamente
+            como lo había imaginado.”
+          </p>
+
+          <strong>
+            Julieta
+          </strong>
+
+        </article>
+
+
+        <article class="opinion revelar">
+
+          <div class="estrellas">
+            ★★★★★
+          </div>
+
+          <p>
+            “El salón es precioso y el trabajo súper profesional.
+            Volvería sin dudarlo.”
+          </p>
+
+          <strong>
+            Martina
+          </strong>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TURNOS
+    ========================== -->
+
+    <section class="seccion turnos" id="turnos">
+
+      <div class="turnos-contenedor revelar">
+
+        <div class="turnos-texto">
+
+          <p class="etiqueta">
+            Reservas
+          </p>
+
+          <h2>
+            Reservá tu turno
+          </h2>
+
+          <p>
+            Elegí un servicio, seleccioná el día y el horario.
+            Al confirmar se abrirá WhatsApp con toda la información.
+          </p>
+
+        </div>
+
+
+        <form id="formulario-turno" class="formulario-turno">
+
+          <label for="nombre">
+            Nombre
+          </label>
+
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Escribí tu nombre"
+            required
+          >
+
+
+          <label for="servicio">
+            Servicio
+          </label>
+
+          <select id="servicio" required>
+
+            <option value="">
+              Seleccioná un servicio
+            </option>
+
+            <option value="Kapping Gel">
+              Kapping Gel
+            </option>
+
+            <option value="Semigel">
+              Semigel
+            </option>
+
+            <option value="Soft Gel">
+              Soft Gel
+            </option>
+
+          </select>
+
+
+          <label for="fecha">
+            Día
+          </label>
+
+          <input
+            type="date"
+            id="fecha"
+            required
+          >
+
+
+          <label for="hora">
+            Horario
+          </label>
+
+          <select id="hora" required>
+
+            <option value="">
+              Seleccioná un horario
+            </option>
+
+            <option value="09:00">
+              09:00
+            </option>
+
+            <option value="11:00">
+              11:00
+            </option>
+
+            <option value="14:00">
+              14:00
+            </option>
+
+            <option value="16:00">
+              16:00
+            </option>
+
+            <option value="18:00">
+              18:00
+            </option>
+
+          </select>
+
+
+          <button type="submit" class="boton-principal">
+            Confirmar por WhatsApp
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
+    <section class="contacto" id="contacto">
+
+      <div class="contacto-imagen">
+        <img
+          src="img/salon.jpg"
+          alt="Salón Luna Style"
+        >
+      </div>
+
+      <div class="contacto-informacion revelar">
+
+        <p class="etiqueta">
+          Nuestro espacio
+        </p>
+
+        <h2>
+          Un lugar pensado para vos
+        </h2>
+
+        <p>
+          Disfrutá un momento de cuidado y belleza en un ambiente
+          cómodo, delicado y profesional.
+        </p>
+
+        <div class="datos-contacto">
+
+          <div>
+            <span>Dirección</span>
+            <strong>Av. San Martín 1234, Mendoza</strong>
+          </div>
+
+          <div>
+            <span>Horarios</span>
+            <strong>Lunes a sábado, de 9:00 a 20:00</strong>
+          </div>
+
+          <div>
+            <span>Contacto</span>
+            <strong>Turnos por WhatsApp</strong>
+          </div>
+
+        </div>
+
+        <div class="contacto-botones">
+
+          <a
+            href="https://wa.me/5492634475711?text=Hola,%20quiero%20consultar%20por%20un%20turno%20en%20Luna%20Style."
+            target="_blank"
+            class="boton-principal"
+          >
+            Escribir por WhatsApp
+          </a>
+
+          <a
+            href="https://www.google.com/maps"
+            target="_blank"
+            class="boton-secundario"
+          >
+            Cómo llegar
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       MODAL DE GALERÍA
+  ========================== -->
+
+  <div
+    class="modal-galeria"
+    id="modal-galeria"
+    aria-hidden="true"
+  >
+
+    <button
+      type="button"
+      class="cerrar-modal"
+      id="cerrar-modal"
+      aria-label="Cerrar imagen"
+    >
+      ×
+    </button>
+
+    <img
+      src=""
+      alt="Diseño ampliado"
+      id="imagen-ampliada"
+    >
+
+  </div>
+
+
+  <!-- =========================
+       WHATSAPP FLOTANTE
+  ========================== -->
+
+  <a
+    href="https://wa.me/5492634475711?text=Hola,%20quiero%20consultar%20por%20un%20turno%20en%20Luna%20Style."
+    target="_blank"
+    class="whatsapp-flotante"
+    aria-label="Abrir WhatsApp"
+  >
+    W
+  </a>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="pie">
+
+    <p class="logo-pie">
+      Luna Style
+    </p>
+
+    <p>
+      Elegancia en tus manos.
+    </p>
+
+    <div class="redes">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">TikTok</a>
+      <a
+        href="https://wa.me/5492634475711"
+        target="_blank"
+      >
+        WhatsApp
+      </a>
+    </div>
+
+    <p class="copyright">
+      © 2026 Luna Style. Sitio demostrativo.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
