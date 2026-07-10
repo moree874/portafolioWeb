@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XV Delfi - 5 Invitados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="fondo-brillo"></div>
+
+<section class="slide portada">
+  <div class="contenido-portada">
+    <p class="xv">XV Años</p>
+    <h1>Delfi</h1>
+    <p class="frase">Una noche mágica para celebrar mis 15</p>
+    <div class="linea"></div>
+    <p class="fecha">15 · 08 · 2026</p>
+    <p class="hora">21:30 hs</p>
+    <button class="btn-principal" onclick="abrirInvitacion()">Abrir invitación</button>
+  </div>
+</section>
+
+<main id="contenido" class="oculto">
+
+  <section class="slide">
+    <p class="mini-titulo">Cuenta regresiva</p>
+    <h2>Faltan</h2>
+    <div class="contador">
+      <div><span id="dias">0</span><p>Días</p></div>
+      <div><span id="horas">0</span><p>Hs</p></div>
+      <div><span id="minutos">0</span><p>Min</p></div>
+      <div><span id="segundos">0</span><p>Seg</p></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <img src="img/ubicacion.png" class="icono" alt="Ubicación">
+    <p class="mini-titulo">Lugar del evento</p>
+    <h2>¿Cómo llegar?</h2>
+    <p class="texto">Botánico</p>
+    <p class="texto">Medrano, Mendoza</p>
+
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11232.466182457083!2d-68.61148444133774!3d-33.17653101321144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e67001efc3e23%3A0x743b43ce00bbdb76!2sBOTANICO!5e0!3m2!1ses-419!2sar!4v1782966499998!5m2!1ses-419!2sar"
+        allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </section>
+
+  <section class="slide">
+    <img src="img/dress-code.png" class="icono-grande" alt="Dress Code">
+    <p class="mini-titulo">Código de vestimenta</p>
+    <h2>Dress Code</h2>
+    <p class="destacado">Formal / Elegante</p>
+    <p class="texto">Para que la homenajeada sea la única protagonista, evitá asistir con prendas de estos colores.</p>
+
+    <div class="colores">
+      <div><img src="img/amarillo.png" alt="Amarillo"><p>Amarillo</p></div>
+      <div><img src="img/rosado.png" alt="Rosado"><p>Rosado</p></div>
+      <div><img src="img/azul.png" alt="Azul"><p>Azul</p></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <img src="img/regalo.png" class="icono" alt="Regalo">
+    <p class="mini-titulo">Mesa de regalos</p>
+    <h2>Regalo</h2>
+    <p class="texto">El mejor regalo es tu compañía.</p>
+    <p class="texto">Pero si querés obsequiarme algo, podés hacerlo acá:</p>
+    <a class="boton" href="https://link.mercadopago.com.ar/delfirosales3" target="_blank">Hacer regalo</a>
+  </section>
+
+  <section class="slide confirmacion">
+
+    <p class="mini-titulo">Confirmación</p>
+
+    <h2>¿Venís?</h2>
+
+    <div class="aviso">
+
+        <p>Confirmá tu asistencia hasta el <strong>25 de julio de 2026</strong>.</p>
+
+        <p>Esta invitación es válida para <strong>5 personas</strong>.</p>
+
+        <p>Completá los datos de los cinco invitados.</p>
+
+    </div>
+
+    <form id="formulario" data-cupos="5">
+
+        <input
+            type="text"
+            id="familia"
+            placeholder="Apellido de la familia"
+            required>
+
+        <div id="integrantes"></div>
+
+        <button
+            type="submit"
+            class="btn-principal">
+
+            Confirmar asistencia
+
+        </button>
+
+    </form>
+
+</section>
+  <section class="slide playlist">
+    <p class="mini-titulo">Música</p>
+    <h2>Playlist</h2>
+    <p class="texto">Unite a la playlist y agregá tus canciones.</p>
+
+    <div class="spotify-box">
+      <iframe 
+        src="https://open.spotify.com/embed/playlist/4BHUNe8gylJsCLXfNku3pb?utm_source=generator"
+        width="100%" height="380" frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="slide final">
+    <p class="mini-titulo">Gracias por acompañarme</p>
+    <h2>Te espero</h2>
+    <p class="texto">Será una noche inolvidable llena de magia, música y momentos hermosos.</p>
+    <p class="firma">Delfi XV</p>
+  </section>
+
+</main>
+
+<audio id="musica" loop>
+  <source src="musica/turning_page.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js?v=1000"></script>
+</body>
+</html>

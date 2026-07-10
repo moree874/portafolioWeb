@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Invitación digital Aura para celebraciones y eventos familiares."
+  >
+
+  <title>Aura | Invitación digital</title>
+
+  <!-- Tipografías -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===================================
+       PANTALLA DE APERTURA
+  ==================================== -->
+
+  <section class="apertura" id="apertura">
+
+    <div class="apertura-fondo"></div>
+
+    <div class="apertura-overlay"></div>
+
+    <div class="apertura-contenido">
+
+      <p class="apertura-etiqueta">
+        Estás invitado a celebrar
+      </p>
+
+      <h1>
+        Martina
+      </h1>
+
+      <p class="apertura-subtitulo">
+        Mi cumpleaños
+      </p>
+
+      <button
+        type="button"
+        class="boton-abrir"
+        id="boton-abrir"
+      >
+        Abrir invitación
+      </button>
+
+    </div>
+
+    <p class="apertura-pie">
+      Deslizá para descubrir todos los detalles
+    </p>
+
+  </section>
+
+
+  <!-- ===================================
+       CONTENIDO DE LA INVITACIÓN
+  ==================================== -->
+
+  <main id="contenido" class="contenido oculto">
+
+    <!-- ===================================
+         PORTADA
+    ==================================== -->
+
+    <section class="portada" id="inicio">
+
+      <div class="portada-fondo"></div>
+
+      <div class="portada-overlay"></div>
+
+      <div class="portada-contenido">
+
+        <p class="texto-superior">
+          Te invito a compartir
+        </p>
+
+        <h2>
+          Martina
+        </h2>
+
+        <p class="evento">
+          Mi cumpleaños
+        </p>
+
+        <div class="separador">
+          ✦
+        </div>
+
+        <p class="fecha-principal">
+          15 · 08 · 2026
+        </p>
+
+      </div>
+
+      <a
+        href="#cuenta-regresiva"
+        class="flecha-bajar"
+        aria-label="Ir a la siguiente sección"
+      >
+        ↓
+      </a>
+
+    </section>
+
+
+    <!-- ===================================
+         FRASE
+    ==================================== -->
+
+    <section class="frase revelar">
+
+      <span class="detalle-decorativo">
+        ✦
+      </span>
+
+      <p>
+        Hay momentos que se vuelven aún más especiales
+        cuando los compartimos con las personas que queremos.
+      </p>
+
+      <span class="detalle-decorativo">
+        ✦
+      </span>
+
+    </section>
+
+
+    <!-- ===================================
+         CUENTA REGRESIVA
+    ==================================== -->
+
+    <section
+      class="seccion cuenta-regresiva"
+      id="cuenta-regresiva"
+    >
+
+      <div class="encabezado-seccion revelar">
+
+        <p class="etiqueta">
+          Falta muy poco
+        </p>
+
+        <h2>
+          Cuenta regresiva
+        </h2>
+
+        <p>
+          Estamos contando los días para celebrar juntos.
+        </p>
+
+      </div>
+
+
+      <div
+        class="contador revelar"
+        data-fecha-evento="2026-08-15T21:00:00"
+      >
+
+        <article class="contador-item">
+
+          <span id="dias">
+            00
+          </span>
+
+          <small>
+            Días
+          </small>
+
+        </article>
+
+
+        <article class="contador-item">
+
+          <span id="horas">
+            00
+          </span>
+
+          <small>
+            Horas
+          </small>
+
+        </article>
+
+
+        <article class="contador-item">
+
+          <span id="minutos">
+            00
+          </span>
+
+          <small>
+            Minutos
+          </small>
+
+        </article>
+
+
+        <article class="contador-item">
+
+          <span id="segundos">
+            00
+          </span>
+
+          <small>
+            Segundos
+          </small>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================
+         INFORMACIÓN DEL EVENTO
+    ==================================== -->
+
+    <section class="seccion informacion" id="informacion">
+
+      <div class="encabezado-seccion revelar">
+
+        <p class="etiqueta">
+          Guardá la fecha
+        </p>
+
+        <h2>
+          Detalles del evento
+        </h2>
+
+      </div>
+
+
+      <div class="tarjetas-informacion">
+
+        <!-- FECHA -->
+
+        <article class="tarjeta-informacion revelar">
+
+          <span class="icono-informacion">
+            ♡
+          </span>
+
+          <p class="titulo-pequeno">
+            Fecha
+          </p>
+
+          <h3>
+            Sábado 15 de agosto
+          </h3>
+
+          <p>
+            Te esperamos para compartir una noche especial.
+          </p>
+
+        </article>
+
+
+        <!-- HORA -->
+
+        <article class="tarjeta-informacion revelar">
+
+          <span class="icono-informacion">
+            ◷
+          </span>
+
+          <p class="titulo-pequeno">
+            Horario
+          </p>
+
+          <h3>
+            21:00 horas
+          </h3>
+
+          <p>
+            La celebración comenzará puntualmente.
+          </p>
+
+        </article>
+
+
+        <!-- LUGAR -->
+
+        <article class="tarjeta-informacion revelar">
+
+          <span class="icono-informacion">
+            ⟡
+          </span>
+
+          <p class="titulo-pequeno">
+            Lugar
+          </p>
+
+          <h3>
+            Salón Aura
+          </h3>
+
+          <p>
+            Av. San Martín 1234, Mendoza.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================
+         GALERÍA
+    ==================================== -->
+
+    <section class="seccion galeria-seccion" id="galeria">
+
+      <div class="encabezado-seccion revelar">
+
+        <p class="etiqueta">
+          Algunos recuerdos
+        </p>
+
+        <h2>
+          Galería
+        </h2>
+
+        <p>
+          Pequeños momentos que forman parte de esta historia.
+        </p>
+
+      </div>
+
+
+      <div class="galeria">
+
+        <button
+          type="button"
+          class="foto-galeria foto-grande revelar"
+          data-imagen="img/foto1.jpg"
+          aria-label="Abrir primera fotografía"
+        >
+          <img
+            src="img/foto1.jpg"
+            alt="Fotografía del evento"
+          >
+        </button>
+
+
+        <button
+          type="button"
+          class="foto-galeria revelar"
+          data-imagen="img/foto2.jpg"
+          aria-label="Abrir segunda fotografía"
+        >
+          <img
+            src="img/foto2.jpg"
+            alt="Fotografía de Martina"
+          >
+        </button>
+
+
+        <button
+          type="button"
+          class="foto-galeria revelar"
+          data-imagen="img/foto3.jpg"
+          aria-label="Abrir tercera fotografía"
+        >
+          <img
+            src="img/foto3.jpg"
+            alt="Fotografía familiar"
+          >
+        </button>
+
+
+        <button
+          type="button"
+          class="foto-galeria foto-horizontal revelar"
+          data-imagen="img/foto4.jpg"
+          aria-label="Abrir cuarta fotografía"
+        >
+          <img
+            src="img/foto4.jpg"
+            alt="Recuerdo especial"
+          >
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================
+         UBICACIÓN
+    ==================================== -->
+
+    <section class="ubicacion" id="ubicacion">
+
+      <div class="ubicacion-contenido revelar">
+
+        <p class="etiqueta">
+          Cómo llegar
+        </p>
+
+        <h2>
+          Salón Aura
+        </h2>
+
+        <p>
+          Av. San Martín 1234, Mendoza
+        </p>
+
+        <p class="indicacion">
+          Tocá el botón para abrir la ubicación en Google Maps.
+        </p>
+
+        <a
+          href="https://www.google.com/maps"
+          target="_blank"
+          class="boton boton-principal"
+        >
+          Ver ubicación
+        </a>
+
+      </div>
+
+      <div class="ubicacion-decoracion">
+        <span>
+          ⟡
+        </span>
+      </div>
+
+    </section>
+
+
+    <!-- ===================================
+         CONFIRMACIÓN
+    ==================================== -->
+
+    <section class="seccion confirmacion" id="confirmacion">
+
+      <div class="confirmacion-contenedor revelar">
+
+        <div class="confirmacion-texto">
+
+          <p class="etiqueta">
+            Confirmación
+          </p>
+
+          <h2>
+            ¿Nos acompañás?
+          </h2>
+
+          <p>
+            Por favor, confirmá tu asistencia antes del
+            5 de agosto.
+          </p>
+
+          <p class="confirmacion-nota">
+            Al enviar el formulario se abrirá WhatsApp
+            con tus datos.
+          </p>
+
+        </div>
+
+
+        <form
+          class="formulario-confirmacion"
+          id="formulario-confirmacion"
+        >
+
+          <label for="nombre">
+            Nombre y apellido
+          </label>
+
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Escribí tu nombre"
+            autocomplete="name"
+            required
+          >
+
+
+          <label for="asistencia">
+            ¿Vas a asistir?
+          </label>
+
+          <select
+            id="asistencia"
+            name="asistencia"
+            required
+          >
+
+            <option value="">
+              Seleccioná una opción
+            </option>
+
+            <option value="Sí, voy a asistir">
+              Sí, voy a asistir
+            </option>
+
+            <option value="No voy a poder asistir">
+              No voy a poder asistir
+            </option>
+
+          </select>
+
+
+          <div id="grupo-cantidad">
+
+            <label for="cantidad">
+              Cantidad de personas
+            </label>
+
+            <select
+              id="cantidad"
+              name="cantidad"
+            >
+
+              <option value="1">
+                1 persona
+              </option>
+
+              <option value="2">
+                2 personas
+              </option>
+
+              <option value="3">
+                3 personas
+              </option>
+
+              <option value="4">
+                4 personas
+              </option>
+
+              <option value="5">
+                5 personas
+              </option>
+
+              <option value="6">
+                6 personas
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <label for="mensaje">
+            Mensaje opcional
+          </label>
+
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="4"
+            placeholder="Podés dejar un mensaje especial"
+          ></textarea>
+
+
+          <button
+            type="submit"
+            class="boton boton-principal boton-confirmar"
+          >
+            Confirmar asistencia
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================
+         DESPEDIDA
+    ==================================== -->
+
+    <section class="despedida">
+
+      <div class="despedida-fondo"></div>
+
+      <div class="despedida-overlay"></div>
+
+      <div class="despedida-contenido revelar">
+
+        <p class="etiqueta">
+          Te esperamos
+        </p>
+
+        <h2>
+          Será una alegría compartir este día con vos
+        </h2>
+
+        <p class="firma">
+          Martina
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ===================================
+       MODAL DE GALERÍA
+  ==================================== -->
+
+  <div
+    class="modal-galeria"
+    id="modal-galeria"
+    aria-hidden="true"
+  >
+
+    <button
+      type="button"
+      class="cerrar-modal"
+      id="cerrar-modal"
+      aria-label="Cerrar fotografía"
+    >
+      ×
+    </button>
+
+    <img
+      src=""
+      alt="Fotografía ampliada"
+      id="imagen-ampliada"
+    >
+
+  </div>
+
+
+  <!-- ===================================
+       PIE DE PÁGINA
+  ==================================== -->
+
+  <footer class="pie">
+
+    <p class="marca-pie">
+      Aura
+    </p>
+
+    <p>
+      Invitación digital
+    </p>
+
+    <p class="copyright">
+      © 2026 · Diseño demostrativo
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
