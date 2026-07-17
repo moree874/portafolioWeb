@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `%0AEl turno queda sujeto a confirmación.`;
 
       window.open(
-        `https://wa.me/5492634475711?text=${mensaje}`,
+        `https://wa.me/5492634475730?text=${mensaje}`,
         "_blank"
       );
 

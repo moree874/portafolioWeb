@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         window.open(
-          `https://wa.me/5492634475711?text=${mensaje}`,
+          `https://wa.me/5492634475730?text=${mensaje}`,
           "_blank"
         );
       }
