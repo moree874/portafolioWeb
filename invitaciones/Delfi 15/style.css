@@ -415,3 +415,19 @@ select {
     background:#f2f2f2;
 
 }
+.spotify-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#1DB954;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.spotify-btn:hover{
+    background:#169c46;
+    transform:scale(1.05);
+}
